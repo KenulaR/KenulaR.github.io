@@ -92,12 +92,20 @@ a {
     font-size: 2rem;
     color: var(--text-secondary);
     margin-bottom: 20px;
+    /* This adds the typewriter look */
+    font-family: 'Courier New', Courier, monospace; 
 }
 
 .bio {
     max-width: 500px;
     color: var(--text-secondary);
     margin-bottom: 40px;
+    font-family: 'Courier New', Courier, monospace;
+    
+    /* --- NEW CHANGES --- */
+    font-size: 1.1rem;   /* 1rem is standard. 1.1rem makes it a bit bigger. */
+    /* font-weight: bold;   /* This makes the text bold */
+    line-height: 1.6;    /* Keeps the spacing between lines readable */
 }
 
 /* --- Social Buttons --- */
@@ -193,8 +201,9 @@ a {
     display: flex;
     gap: 15px;
     font-size: 0.8rem;
-    font-family: monospace;
     color: var(--text-secondary);
+    /* Adding Courier New here makes the tags look like code snippets */
+    font-family: 'Courier New', Courier, monospace; 
 }
 
 /* --- Footer --- */

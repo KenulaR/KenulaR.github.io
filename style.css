@@ -104,7 +104,7 @@ a {
     
     /* --- NEW CHANGES --- */
     font-size: 1.1rem;   /* 1rem is standard. 1.1rem makes it a bit bigger. */
-    /* font-weight: bold;   /* This makes the text bold */
+    font-weight: bold;   /* This makes the text bold */
     line-height: 1.6;    /* Keeps the spacing between lines readable */
 }
 

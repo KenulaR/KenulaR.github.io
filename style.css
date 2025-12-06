@@ -171,52 +171,53 @@ footer { text-align: center; padding: 40px; color: var(--text-secondary); font-s
 /* --- MOBILE RESPONSIVENESS FIX --- */
 @media (max-width: 768px) {
     
+    body {
+        padding-top: 0; /* Remove top padding since nav won't be fixed */
+    }
+
     /* 1. Fix the Navigation Bar */
     .navbar {
-        padding: 15px 20px; /* Reduce padding so it fits on screen */
-        flex-direction: column; /* Stack Logo and Links on top of each other */
+        position: relative; /* STOPS it from floating over text */
+        flex-direction: column;
         gap: 15px;
+        padding: 20px;
     }
 
     .nav-links {
-        gap: 20px; /* Bring links closer together */
-        font-size: 0.8rem; /* Make text slightly smaller to fit */
+        gap: 15px;
+        font-size: 0.85rem; 
         width: 100%;
         justify-content: center;
-        flex-wrap: wrap; /* Allow links to wrap to next line if needed */
+        flex-wrap: wrap; 
     }
 
-    /* 2. Fix the Project & Photo Grids */
+    /* 2. Fix the Grids */
     .project-grid, .photo-grid {
-        /* Force 1 column on mobile so cards don't get squished */
-        grid-template-columns: 1fr; 
+        grid-template-columns: 1fr; /* Force 1 column */
     }
 
-    .project-card, .photo-card {
-        padding: 20px; /* Less internal padding */
-    }
-
-    /* 3. Fix the Big Text (Hero Section) */
+    /* 3. Adjust Layout Spacing */
     .hero {
-        height: auto; /* Allow section to grow if text is long */
-        padding: 120px 20px 60px 20px; /* Add top padding so text doesn't hide behind nav */
-        text-align: center; /* Center align text on mobile looks better */
+        height: auto;
+        padding: 40px 20px; /* Reduced top padding because nav is no longer fixed */
+        text-align: center; 
     }
 
     .hero h1 {
-        font-size: 2.5rem; /* Shrink the giant name text */
+        font-size: 2.5rem; 
     }
 
     .hero .bio {
         font-size: 1rem;
-        margin: 0 auto 30px auto; /* Center the bio text */
+        margin: 0 auto 30px auto; 
     }
 
     .container {
-        padding: 80px 20px;
+        padding: 40px 20px; /* Reduce padding for inner pages */
     }
     
     .page-title {
         font-size: 2.2rem;
+        text-align: center; /* Center titles on mobile looks cleaner */
     }
 }

@@ -5,49 +5,100 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects | Kenula</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
-    <div class="logo"><a href="index.html">Portfolio.</a></div>
     
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="socials.html">Socials</a></li>
-        <li><a href="photos.html">Gallery</a></li>
-    </ul>
+    <nav class="navbar">
+        <div class="logo"><a href="index.html">Portfolio.</a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html" class="active">Projects</a></li>
+            <li><a href="socials.html">Socials</a></li>
+            <li><a href="photos.html">Gallery</a></li>
+        </ul>
     </nav>
 
     <div class="container">
-        <h1 class="page-title">My Projects.</h1>
-        <p class="page-desc">Some things I've built.</p>
+        <h1 class="page-title">Projects</h1>
+        <p class="page-desc">Things I have built for the good.</p>
 
         <div class="project-grid">
+            
             <div class="project-card">
+                <div class="card-header">
+                    <div class="folder-icon"><i class="fas fa-closed-captioning"></i></div>
+                    
+                    <div class="card-links">
+                        <a href="https://fastidious-pastelito-48af52.netlify.app/" target="_blank" title="Visit Website">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        <a href="INSERT_GITHUB_LINK_HERE" target="_blank" title="View Source Code">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
                 <h3>ProjectSUB</h3>
-                <p style="color: var(--text-secondary);">A dedicated subtitle application designed for ease of use. (Files coming soon).</p>
-                <div style="font-family: monospace; color: var(--accent);">
-                    <span>App Dev</span> • <span>Tools</span>
+                
+                <p class="project-desc">
+                    This tool functions as a real time accessibility aid for live presentations.
+                    <br><br>
+                    <span class="text-highlight">The Problem:</span> 
+                    Non-native English speakers frequently struggle to fully grasp lectures due to pronunciation nuances and delivery speed, creating a significant communication barrier.
+                    <br><br>
+                    <span class="text-highlight">The Solution:</span> 
+                    Leveraging the utility of closed captions, this app generates real-time subtitles alongside the speaker’s visuals. This allows the audience to read along instantly, maximizing comprehension.
+                </p>
+
+                <div class="tech-list">
+                    <span>Python</span>
+                    <span>Web App</span>
                 </div>
             </div>
 
             <div class="project-card">
+                <div class="card-header">
+                    <div class="folder-icon"><i class="fas fa-link"></i></div>
+                    
+                    <div class="card-links">
+                        <a href="INSERT_WEBAPP_LINK_HERE" target="_blank" title="Visit Website">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        <a href="INSERT_GITHUB_LINK_HERE" target="_blank" title="View Source Code">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+
                 <h3>ProjectLINKS</h3>
-                <p style="color: var(--text-secondary);">An "All-in-One" link aggregator application. Keeps your digital presence organized.</p>
-                <div style="font-family: monospace; color: var(--accent);">
-                    <span>Web Tool</span> • <span>Utility</span>
+                
+                <p class="project-desc">
+                    An AI-powered notepad that integrates directly into the browser to manage ephemeral web content.
+                    <br><br>
+                    <span class="text-highlight">The Problem:</span> 
+                    Despite the abundance of note-taking apps, there is no streamlined way to manage "digital clutter." Users frequently encounter random links—like wishlists or niche tools—that do not warrant a permanent bookmark but still need to be saved.
+                    <br><br>
+                    <span class="text-highlight">The Solution:</span> 
+                    A "New Tab" page integration that acts as a centralized hub. Instead of manual sorting, the integrated AI analyzes and automatically categorizes loose links, ensuring an organized workspace with zero friction.
+                </p>
+
+                <div class="tech-list">
+                    <span>HTML/CSS</span>
+                    <span>AI Integration</span>
                 </div>
             </div>
+
         </div>
     </div>
 
     <footer>
-    <p>Designed and created by Kenula Ranasinghe.</p>
-    <p>&copy; <span id="year"></span> All rights reserved.</p>
-    </footer>   
+        <p>Designed and created by Kenula Ranasinghe.</p>
+        <p>&copy; <span id="year"></span> All rights reserved.</p>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>

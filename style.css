@@ -168,56 +168,60 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
 /* --- Footer --- */
 footer { text-align: center; padding: 40px; color: var(--text-secondary); font-size: 0.8rem; }
 
-/* --- MOBILE RESPONSIVENESS FIX --- */
+/* --- MOBILE RESPONSIVENESS FIX (Clean & Centered) --- */
 @media (max-width: 768px) {
     
     body {
-        padding-top: 0; /* Remove top padding since nav won't be fixed */
+        padding-top: 0;
     }
 
     /* 1. Fix the Navigation Bar */
     .navbar {
-        position: relative; /* STOPS it from floating over text */
-        flex-direction: column;
-        gap: 15px;
-        padding: 20px;
+        position: relative;
+        flex-direction: column; 
+        gap: 10px;
+        padding: 20px 0; /* Remove side padding to use full width */
     }
 
     .nav-links {
-        gap: 15px;
-        font-size: 0.85rem; 
+        display: flex;
+        flex-direction: row;    /* Force single line */
+        flex-wrap: nowrap;      /* Do not wrap to next line */
+        justify-content: center; /* Center everything nicely */
+        gap: 20px;              /* The space between each word */
         width: 100%;
-        justify-content: center;
-        flex-wrap: wrap; 
+    }
+
+    .nav-links li {
+        flex-shrink: 0; 
+    }
+
+    .nav-links a {
+        font-size: 13px;       /* Increased size (was 10px) */
+        letter-spacing: 0.5px; /* Added a little breathing room */
+        font-weight: 600;      
+        padding: 5px;
     }
 
     /* 2. Fix the Grids */
     .project-grid, .photo-grid {
-        grid-template-columns: 1fr; /* Force 1 column */
+        grid-template-columns: 1fr;
+    }
+
+    .project-card, .photo-card {
+        padding: 20px;
     }
 
     /* 3. Adjust Layout Spacing */
     .hero {
         height: auto;
-        padding: 40px 20px; /* Reduced top padding because nav is no longer fixed */
-        text-align: center; 
+        padding: 30px 20px;
+        text-align: center;
     }
 
-    .hero h1 {
-        font-size: 2.5rem; 
-    }
-
-    .hero .bio {
-        font-size: 1rem;
-        margin: 0 auto 30px auto; 
-    }
-
-    .container {
-        padding: 40px 20px; /* Reduce padding for inner pages */
-    }
+    .hero h1 { font-size: 2.5rem; }
+    .hero .bio { font-size: 1rem; margin: 0 auto 30px auto; }
     
-    .page-title {
-        font-size: 2.2rem;
-        text-align: center; /* Center titles on mobile looks cleaner */
-    }
+    .container { padding: 40px 20px; }
+    .page-title { font-size: 2.2rem; text-align: center; }
 }

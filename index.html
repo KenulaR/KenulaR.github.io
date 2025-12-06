@@ -1,102 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">  
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Kenula Ranasinghe</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
 </head>
 <body>
-
     <nav class="navbar">
-        <div class="logo">Portfolio.</div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Connect</a></li>
-        </ul>
+    <div class="logo"><a href="index.html">KENULA.</a></div>
+    
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="socials.html">Socials</a></li>
+        <li><a href="photos.html">Photos & Movies</a></li>
+    </ul>
     </nav>
 
-    <section id="about" class="hero">
-        <div class="hero-content">
-            <h1>Hello, I'm <span class="highlight">Kenula Ranasinghe</span>.</h1>
-            <p class="subtitle">Hardware.Software.Me.</p>
-            <p class="bio">
-               A Computer Engineering student curious about how technology ticks.
-               I believe in balancing logic with creativity — spending my downtime framing the world through photography and seeking out cinema that leaves a lasting impression.
-            </p>
-            
-            <div class="social-links">
-                <a href="https://github.com/KenulaR" target="_blank" class="social-btn"><i class="fab fa-github"></i> GitHub</a>
-                <a href="https://www.linkedin.com/in/kenularanasinghe/" target="_blank" class="social-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="https://www.instagram.com/kenula.r" target="_blank" class="social-btn"><i class="fab fa-instagram"></i> Instagram</a>
-                <a href="mailto:kenularanasinghe@gmail.com" class="social-btn"><i class="fas fa-envelope"></i> Email</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="projects-section">
-        <h2 class="section-title">Selected Projects</h2>
+    <section class="hero">
+        <p style="color: var(--accent); font-family: monospace;">Hi, my name is</p>
+        <h1>Kenula Ranasinghe.</h1>
         
-        <div class="project-grid">
-            <div class="project-card">
-                <div class="card-header">
-                    <i class="fas fa-folder-open folder-icon"></i>
-                    <div class="card-links">
-                        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
-                        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-                    </div>
-                </div>
-                <h3>Personal AI Assistant</h3>
-                <p>A Python-based AI assistant inspired by Jarvis. Uses speech recognition and NLP to automate daily tasks.</p>
-                <div class="tech-stack">
-                    <span>Python</span>
-                    <span>OpenAI API</span>
-                    <span>SpeechRec</span>
-                </div>
-            </div>
+        <p class="bio">
+            I am a creator and developer. I build digital tools and capture moments. 
+            Welcome to my personal corner of the internet.
+        </p>
 
-            <div class="project-card">
-                <div class="card-header">
-                    <i class="fas fa-folder-open folder-icon"></i>
-                    <div class="card-links">
-                        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <h3>Video Hosting Platform</h3>
-                <p>A custom-built website for hosting video content with integrated advertisement slots.</p>
-                <div class="tech-stack">
-                    <span>HTML5</span>
-                    <span>CSS3</span>
-                    <span>JavaScript</span>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="card-header">
-                    <i class="fas fa-folder-open folder-icon"></i>
-                    <div class="card-links">
-                        <a href="#" target="_blank"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <h3>Drone Intro Video</h3>
-                <p>A futuristic promotional video created for a drone product launch, focusing on motion graphics.</p>
-                <div class="tech-stack">
-                    <span>Video Editing</span>
-                    <span>After Effects</span>
-                </div>
-            </div>
-        </div>
+        <a href="projects.html" class="cta-button">
+            Check out my Projects <i class="fas fa-arrow-right"></i>
+        </a>
     </section>
 
-    <footer id="contact">
-        <p>Built & Designed by Kenula Ranasinghe.</p>
-        <p>&copy; <span id="year"></span> All rights reserved.</p>
+    <footer>
+    <p>Designed and created by Kenula Ranasinghe.</p>
+    <p>&copy; <span id="year"></span> All rights reserved.</p>
     </footer>
-
     <script src="script.js"></script>
 </body>
 </html>

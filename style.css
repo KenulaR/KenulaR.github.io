@@ -62,6 +62,10 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
     color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 1px;
+    
+    /* --- NEW FONT --- */
+    font-family: 'Space Mono', monospace; /* Gives it the coding look */
+    font-weight: 700; /* Makes it bold and easy to read */
 }
 
 .nav-links a:hover, .nav-links a.active {
@@ -260,4 +264,5 @@ footer { text-align: center; padding: 40px; color: var(--text-secondary); font-s
     font-weight: bold;  /* Makes it stand out more */
     margin-bottom: 20px;
     letter-spacing: 1px;
+    margin-bottom: 0px;
 }

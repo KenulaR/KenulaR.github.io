@@ -5,29 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Socials & Blog | Kenula</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
-    <div class="logo"><a href="index.html">Portfolio.</a></div>
     
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="socials.html">Socials</a></li>
-        <li><a href="photos.html">Gallery</a></li>
-    </ul>
+    <nav class="navbar">
+        <div class="logo"><a href="index.html">Portfolio.</a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="socials.html" class="active">Socials</a></li>
+            <li><a href="photos.html">Gallery</a></li>
+        </ul>
     </nav>
 
     <div class="container">
         <h1 class="page-title">Connect</h1>
+        <p class="page-desc">Find me on the internet.</p>
         
-        <div class="social-list">
-            <a href="#" class="cta-button" style="font-size: 1rem;"><i class="fab fa-instagram"></i> Instagram</a>
-            <a href="#" class="cta-button" style="font-size: 1rem;"><i class="fab fa-youtube"></i> YouTube</a>
-            <a href="#" class="cta-button" style="font-size: 1rem;"><i class="fab fa-twitter"></i> Twitter</a>
+        <div class="social-grid">
+            
+            <a href="https://github.com/INSERT_USERNAME_HERE" target="_blank" class="social-card">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+            </a>
+
+            <a href="https://linkedin.com/in/INSERT_USERNAME_HERE" target="_blank" class="social-card">
+                <i class="fab fa-linkedin-in"></i>
+                <span>LinkedIn</span>
+            </a>
+
+            <a href="mailto:INSERT_EMAIL_HERE@gmail.com" class="social-card">
+                <i class="fas fa-envelope"></i>
+                <span>Email</span>
+            </a>
+
+            <a href="https://instagram.com/INSERT_USERNAME_HERE" target="_blank" class="social-card">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+            </a>
+
         </div>
 
         <div class="blog-section">
@@ -53,8 +73,8 @@
     </div>
 
     <footer>
-    <p>Designed and created by Kenula Ranasinghe.</p>
-    <p>&copy; <span id="year"></span> All rights reserved.</p>
+        <p>Designed and created by Kenula Ranasinghe.</p>
+        <p>&copy; <span id="year"></span> All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
 </body>

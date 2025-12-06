@@ -5,12 +5,12 @@
     --text-primary: #ccd6f6;    /* Off-White */
     --text-secondary: #8892b0;  /* Muted Blue-Grey */
     
-    /* --- NEW COLOR CHANGE --- */
-    --accent: #57cbff;          /* Ice Light Blue */
+    /* Ice Light Blue Accent */
+    --accent: #57cbff;          
     
     --white: #ffffff;
     --font-main: 'Inter', sans-serif;
-    --font-mono: 'Courier New', Courier, monospace;
+    --font-mono: 'Space Mono', monospace; /* Changed to Space Mono for Tech look */
 }
 
 * {
@@ -45,10 +45,11 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
 }
 
 .logo {
-    /* ... keep your other settings ... */
-    font-family: 'Space Mono', monospace;
+    font-family: var(--font-mono); /* Tech font */
+    font-weight: 700;
     font-size: 1.5rem;
-    letter-spacing: -1px; /* Tighter letters look cooler here */
+    color: var(--white);
+    letter-spacing: -1px; /* Tighter letters */
 }
 
 .nav-links {
@@ -63,9 +64,9 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
     text-transform: uppercase;
     letter-spacing: 1px;
     
-    /* --- NEW FONT --- */
-    font-family: 'Space Mono', monospace; /* Gives it the coding look */
-    font-weight: 700; /* Makes it bold and easy to read */
+    /* TECH FONT FOR MENU */
+    font-family: var(--font-mono); 
+    font-weight: 700; 
 }
 
 .nav-links a:hover, .nav-links a.active {
@@ -103,8 +104,46 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
     padding: 0 20px;
 }
 
-.hero h1 { font-size: 4rem; color: var(--white); line-height: 1.1; margin-bottom: 20px; }
-.hero .bio { font-family: var(--font-mono); font-size: 1.1rem; color: var(--text-secondary); max-width: 600px; margin-bottom: 40px; }
+/* Profile Picture Style (Optional) */
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent);
+    box-shadow: 0 0 20px rgba(87, 203, 255, 0.3);
+    margin-bottom: 30px;
+}
+
+/* "Hi, my name is" */
+.greeting {
+    color: var(--accent);
+    font-family: var(--font-mono);
+    font-size: 1.3rem;  
+    font-weight: bold;  
+    letter-spacing: 1px;
+    
+    /* CLOSE GAP DESKTOP FIX */
+    margin-bottom: 0px; 
+}
+
+.hero h1 { 
+    font-size: 4rem; 
+    color: var(--white); 
+    line-height: 1.1; 
+    margin-bottom: 20px; 
+    
+    /* CLOSE GAP DESKTOP FIX */
+    margin-top: 5px;
+}
+
+.hero .bio { 
+    font-family: var(--font-mono); 
+    font-size: 1.1rem; 
+    color: var(--text-secondary); 
+    max-width: 600px; 
+    margin-bottom: 40px; 
+}
 
 /* The Big Project Button */
 .cta-button {
@@ -120,7 +159,7 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
 }
 
 .cta-button:hover {
-    background-color: rgba(100, 255, 218, 0.1);
+    background-color: rgba(87, 203, 255, 0.1);
     transform: translateY(-5px);
 }
 
@@ -164,12 +203,40 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
     margin-bottom: 15px;
 }
 
-/* --- SOCIALS & BLOG PAGE --- */
-.social-list {
-    display: flex;
+/* --- SOCIALS PAGE STYLING --- */
+.social-list { display: flex; gap: 20px; margin-bottom: 60px; } /* Old list style just in case */
+
+.social-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 Columns side-by-side */
     gap: 20px;
     margin-bottom: 60px;
 }
+
+.social-card {
+    background-color: var(--card-color);
+    padding: 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+}
+
+.social-card i { font-size: 2rem; color: var(--accent); }
+
+.social-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--accent);
+    color: var(--white);
+    background-color: rgba(17, 34, 64, 0.8);
+}
+
 .blog-section { border-top: 1px solid #1e2d4d; padding-top: 50px; }
 .blog-post { margin-bottom: 40px; }
 .blog-date { font-family: var(--font-mono); color: var(--accent); font-size: 0.8rem; }
@@ -207,24 +274,24 @@ footer { text-align: center; padding: 40px; color: var(--text-secondary); font-s
     }
 
     .nav-links a {
-        font-size: 13px;       /* Increased size (was 10px) */
+        font-size: 13px;       /* Readable size */
         letter-spacing: 0.5px; /* Added a little breathing room */
-        font-weight: 600;      
+        font-weight: 700;      
         padding: 5px;
+        /* Ensure font matches desktop */
+        font-family: var(--font-mono); 
     }
 
-    /* 2. Fix the Grids */
-    .project-grid, .photo-grid {
-        grid-template-columns: 1fr;
+    /* 2. Fix the Grids (Projects, Photos, Socials) */
+    .project-grid, .photo-grid, .social-grid {
+        grid-template-columns: 1fr; /* Force 1 column */
     }
 
-    .project-card, .photo-card {
+    .project-card, .photo-card, .social-card {
         padding: 20px;
     }
 
     /* 3. Adjust Layout Spacing */
-    /* Inside @media (max-width: 768px) */
-
     .hero {
         height: auto;
         padding: 30px 20px;
@@ -234,35 +301,22 @@ footer { text-align: center; padding: 40px; color: var(--text-secondary); font-s
 
     /* 1. Make Name smaller to fit on one line */
     .hero h1 {
-        font-size: 1.8rem; /* Reduced from 2.5rem to fit "Kenula Ranasinghe" */
-        white-space: nowrap; /* Forces text to NEVER break into two lines */
-        margin-top: 5px; /* Removes extra gap above the name */
+        font-size: 1.8rem; /* Fit "Kenula Ranasinghe" */
+        white-space: nowrap; /* Force 1 line */
+        margin-top: 5px; 
     }
 
     /* 2. Move "Hi, my name is" closer */
     .hero .greeting {
         font-size: 1rem;
-        margin-bottom: 0px; /* Removes the gap below the greeting */
+        margin-bottom: 0px; 
     }
 
     .hero .bio {
         font-size: 1rem;
-        margin: 20px auto 30px auto; /* Adds space below the name, but not above */
+        margin: 20px auto 30px auto; 
     }
     
     .container { padding: 40px 20px; }
     .page-title { font-size: 2.2rem; text-align: center; }
-}
-
-
-.greeting {
-    color: var(--accent);
-    font-family: var(--font-mono);
-    
-    /* --- SIZE CHANGES --- */
-    font-size: 1.3rem;  /* Much bigger (was roughly 0.9rem) */
-    font-weight: bold;  /* Makes it stand out more */
-    margin-bottom: 20px;
-    letter-spacing: 1px;
-    margin-bottom: 0px;
 }

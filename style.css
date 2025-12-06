@@ -219,15 +219,32 @@ footer { text-align: center; padding: 40px; color: var(--text-secondary); font-s
     }
 
     /* 3. Adjust Layout Spacing */
+    /* Inside @media (max-width: 768px) */
+
     .hero {
         height: auto;
         padding: 30px 20px;
         text-align: center;
-        align-items: center;
+        align-items: center; /* Keeps everything centered */
     }
 
-    .hero h1 { font-size: 2.5rem; }
-    .hero .bio { font-size: 1rem; margin: 0 auto 30px auto; }
+    /* 1. Make Name smaller to fit on one line */
+    .hero h1 {
+        font-size: 1.8rem; /* Reduced from 2.5rem to fit "Kenula Ranasinghe" */
+        white-space: nowrap; /* Forces text to NEVER break into two lines */
+        margin-top: 5px; /* Removes extra gap above the name */
+    }
+
+    /* 2. Move "Hi, my name is" closer */
+    .hero .greeting {
+        font-size: 1rem;
+        margin-bottom: 0px; /* Removes the gap below the greeting */
+    }
+
+    .hero .bio {
+        font-size: 1rem;
+        margin: 20px auto 30px auto; /* Adds space below the name, but not above */
+    }
     
     .container { padding: 40px 20px; }
     .page-title { font-size: 2.2rem; text-align: center; }

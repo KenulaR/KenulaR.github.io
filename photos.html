@@ -3,51 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photos | Kenula</title>
+    <title>Gallery | Kenula</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar">
-    <div class="logo"><a href="index.html">Portfolio.</a></div>
     
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="socials.html">Socials</a></li>
-        <li><a href="photos.html">Gallery</a></li>
-    </ul>
-</nav>
+    <nav class="navbar">
+        <div class="logo"><a href="index.html">Portfolio.</a></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="socials.html">Socials</a></li>
+            <li><a href="photos.html" class="active">Gallery</a></li>
+        </ul>
+    </nav>
 
     <div class="container">
-        <h1 class="page-title">Gallery</h1>
-        <p class="page-desc">A collection of shots and clips.</p>
+        <h1 class="page-title">Frames.</h1>
+        <p class="page-desc">There are always two stories to a photo, the one in front of the lens, and the one behind it. Here are some from the first kind.</p>
 
-        <div class="photo-grid">
-            <div class="photo-card">
-                <div class="photo-placeholder"><i class="fas fa-image fa-2x"></i></div>
-                <h4 style="color: var(--white);">Urban Photography</h4>
-                <p style="font-size: 0.9rem; color: var(--text-secondary);">Shots from the city center.</p>
-            </div>
+        <div class="album-section">
+            <h2 class="album-title"><i class="fas fa-camera-retro"></i> ALBUM 1</h2>
+            
+            <div class="photo-grid">
+                
+                <div class="photo-card">
+                    <a href="assets/frames/1.jpg" target="_blank">
+                        <img src="assets/frames/1.jpg" alt="Frame 1" class="gallery-img">
+                    </a>
+                    <p class="photo-caption">Many stories and a drama</p>
+                </div>
 
-            <div class="photo-card">
-                <div class="photo-placeholder"><i class="fas fa-film fa-2x"></i></div>
-                <h4 style="color: var(--white);">Drone Footage</h4>
-                <p style="font-size: 0.9rem; color: var(--text-secondary);">Cinematic clips from my latest trip.</p>
-            </div>
-             <div class="photo-card">
-                <div class="photo-placeholder"><i class="fas fa-camera fa-2x"></i></div>
-                <h4 style="color: var(--white);">Nature</h4>
-                <p style="font-size: 0.9rem; color: var(--text-secondary);">Hiking trails and sunsets.</p>
-            </div>
+                <div class="photo-card">
+                    <a href="assets/frames/2.jpg" target="_blank">
+                        <img src="assets/frames/2.jpg" alt="Frame 2" class="gallery-img">
+                    </a>
+                    <p class="photo-caption">Dominance</p>
+                </div>
+
+                <div class="photo-card">
+                    <a href="assets/frames/3.jpg" target="_blank">
+                        <img src="assets/frames/3.jpg" alt="Frame 3" class="gallery-img">
+                    </a>
+                    <p class="photo-caption">Dominance2</p>
+                </div>
+
+                </div>
         </div>
     </div>
 
     <footer>
-    <p>Designed and created by Kenula Ranasinghe.</p>
-    <p>&copy; <span id="year"></span> All rights reserved.</p>
+        <p>Designed and created by Kenula Ranasinghe.</p>
+        <p>&copy; <span id="year"></span> All rights reserved.</p>
     </footer>
     <script src="script.js"></script>
 </body>

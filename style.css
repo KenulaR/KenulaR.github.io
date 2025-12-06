@@ -5,12 +5,12 @@
     --text-primary: #ccd6f6;    /* Off-White */
     --text-secondary: #8892b0;  /* Muted Blue-Grey */
     
-    /* Ice Light Blue Accent */
-    --accent: #57cbff;          
+    /* --- ACCENT COLOR --- */
+    --accent: #57cbff;          /* Ice Light Blue */
     
     --white: #ffffff;
     --font-main: 'Inter', sans-serif;
-    --font-mono: 'Space Mono', monospace; /* Changed to Space Mono for Tech look */
+    --font-mono: 'Space Mono', monospace; /* Tech Font */
 }
 
 * {
@@ -45,11 +45,11 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
 }
 
 .logo {
-    font-family: var(--font-mono); /* Tech font */
+    font-family: var(--font-mono);
     font-weight: 700;
     font-size: 1.5rem;
     color: var(--white);
-    letter-spacing: -1px; /* Tighter letters */
+    letter-spacing: -1px;
 }
 
 .nav-links {
@@ -63,9 +63,7 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
     color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 1px;
-    
-    /* TECH FONT FOR MENU */
-    font-family: var(--font-mono); 
+    font-family: var(--font-mono); /* Tech font for menu */
     font-weight: 700; 
 }
 
@@ -92,7 +90,7 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
     margin-bottom: 50px;
 }
 
-/* --- HOME PAGE SPECIFIC --- */
+/* --- HOME PAGE STYLES --- */
 .hero {
     height: 80vh;
     display: flex;
@@ -104,7 +102,7 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
     padding: 0 20px;
 }
 
-/* Profile Picture Style (Optional) */
+/* Profile Picture */
 .profile-pic {
     width: 150px;
     height: 150px;
@@ -122,19 +120,16 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
     font-size: 1.3rem;  
     font-weight: bold;  
     letter-spacing: 1px;
-    
-    /* CLOSE GAP DESKTOP FIX */
-    margin-bottom: 0px; 
+    margin-bottom: 0px; /* Zero gap below */
 }
 
+/* Name */
 .hero h1 { 
     font-size: 4rem; 
     color: var(--white); 
     line-height: 1.1; 
     margin-bottom: 20px; 
-    
-    /* CLOSE GAP DESKTOP FIX */
-    margin-top: 5px;
+    margin-top: 5px; /* Tiny gap above */
 }
 
 .hero .bio { 
@@ -145,7 +140,7 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
     margin-bottom: 40px; 
 }
 
-/* The Big Project Button */
+/* Big Button */
 .cta-button {
     display: inline-block;
     padding: 20px 40px;
@@ -180,32 +175,7 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
 .project-card h3 { color: var(--white); margin-bottom: 15px; font-size: 1.5rem; }
 .project-card p { margin-bottom: 20px; }
 
-/* --- PHOTOS PAGE --- */
-.photo-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
-}
-.photo-card {
-    background-color: var(--card-color);
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
-}
-.photo-placeholder {
-    width: 100%;
-    height: 200px;
-    background-color: #0a192f;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--text-secondary);
-    margin-bottom: 15px;
-}
-
-/* --- SOCIALS PAGE STYLING --- */
-.social-list { display: flex; gap: 20px; margin-bottom: 60px; } /* Old list style just in case */
-
+/* --- SOCIALS PAGE --- */
 .social-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* 2 Columns side-by-side */
@@ -242,71 +212,121 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
 .blog-date { font-family: var(--font-mono); color: var(--accent); font-size: 0.8rem; }
 .blog-title { color: var(--white); font-size: 1.5rem; margin: 10px 0; }
 
+/* --- GALLERY / PHOTOS PAGE --- */
+.album-section { margin-bottom: 80px; }
+
+.album-title {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    border-bottom: 1px solid #1e2d4d;
+    padding-bottom: 10px;
+    font-family: var(--font-mono);
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.photo-card {
+    background-color: var(--card-color);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+}
+
+.gallery-img {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover; 
+    border-radius: 3px;
+    margin-bottom: 10px;
+    transition: opacity 0.3s;
+}
+
+.gallery-img:hover { opacity: 0.8; }
+
+.photo-caption {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+}
+
+.photo-placeholder {
+    width: 100%; height: 200px; background-color: #0a192f;
+    display: flex; align-items: center; justify-content: center;
+    color: var(--text-secondary); margin-bottom: 15px;
+}
+
 /* --- Footer --- */
 footer { text-align: center; padding: 40px; color: var(--text-secondary); font-size: 0.8rem; }
 
-/* --- MOBILE RESPONSIVENESS FIX (Clean & Centered) --- */
+/* --- MOBILE RESPONSIVENESS (The "Clean & Centered" Fix) --- */
 @media (max-width: 768px) {
     
-    body {
-        padding-top: 0;
-    }
+    body { padding-top: 0; }
 
-    /* 1. Fix the Navigation Bar */
+    /* 1. Navbar: Single Line, Small Text */
     .navbar {
         position: relative;
         flex-direction: column; 
         gap: 10px;
-        padding: 20px 0; /* Remove side padding to use full width */
+        padding: 20px 0; 
     }
 
     .nav-links {
         display: flex;
-        flex-direction: row;    /* Force single line */
-        flex-wrap: nowrap;      /* Do not wrap to next line */
-        justify-content: center; /* Center everything nicely */
-        gap: 20px;              /* The space between each word */
+        flex-direction: row;    
+        flex-wrap: nowrap;      
+        justify-content: center; 
+        gap: 20px;              
         width: 100%;
     }
 
-    .nav-links li {
-        flex-shrink: 0; 
-    }
+    .nav-links li { flex-shrink: 0; }
 
     .nav-links a {
-        font-size: 13px;       /* Readable size */
-        letter-spacing: 0.5px; /* Added a little breathing room */
+        font-size: 13px;       
+        letter-spacing: 0.5px; 
         font-weight: 700;      
         padding: 5px;
-        /* Ensure font matches desktop */
         font-family: var(--font-mono); 
     }
 
-    /* 2. Fix the Grids (Projects, Photos, Socials) */
+    /* 2. Grids: Force 1 Column */
     .project-grid, .photo-grid, .social-grid {
-        grid-template-columns: 1fr; /* Force 1 column */
+        grid-template-columns: 1fr; 
     }
 
     .project-card, .photo-card, .social-card {
         padding: 20px;
     }
 
-    /* 3. Adjust Layout Spacing */
+    /* 3. Hero Layout: Center Everything */
     .hero {
         height: auto;
         padding: 30px 20px;
         text-align: center;
-        align-items: center; /* Keeps everything centered */
+        align-items: center; /* Crucial for centering button/text */
     }
 
-    /* 1. Make Name smaller to fit on one line */
+    /* Profile Pic on Mobile */
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 20px;
+    }
+
+    /* Name: Smaller & Single Line */
     .hero h1 {
-        font-size: 1.8rem; /* Fit "Kenula Ranasinghe" */
-        white-space: nowrap; /* Force 1 line */
+        font-size: 1.8rem; 
+        white-space: nowrap; 
         margin-top: 5px; 
     }
 
-    /* 2. Move "Hi, my name is" closer */
+    /* Greeting: Close Gap */
     .hero .greeting {
         font-size: 1rem;
         margin-bottom: 0px; 
@@ -318,11 +338,11 @@ footer { text-align: center; padding: 40px; color: var(--text-secondary); font-s
     }
     
     .container { padding: 40px 20px; }
+    
+    /* Center "Find me on the internet" text */
     .page-title, .page-desc { 
-    text-align: center; 
-}
-
-.page-title {
-    font-size: 2.2rem;
-}
+        text-align: center; 
+    }
+    .page-title { font-size: 2.2rem; }
+    .page-desc { margin-bottom: 40px; }
 }

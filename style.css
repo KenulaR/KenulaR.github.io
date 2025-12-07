@@ -176,7 +176,7 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
     box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
 }
 .project-card:hover { transform: translateY(-7px); }
-.project-card h3 { color: var(--white); margin-bottom: 15px; font-size: 1.5rem; }
+.project-card h3 { color: var(--white); margin-bottom: 15px; font-size: 1.3rem; }
 .project-card p { margin-bottom: 20px; }
 
 /* --- PROJECT CARD HEADER STYLES --- */
@@ -211,7 +211,7 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
 .project-desc {
     color: var(--text-secondary);
     margin-bottom: 20px;
-    font-size: 1rem;
+    font-size: 0.9rem;
     line-height: 1.7; /* Makes long text easier to read */
 }
 

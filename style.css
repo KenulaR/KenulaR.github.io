@@ -140,22 +140,26 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
     margin-bottom: 40px; 
 }
 
-/* Big Button */
+/* Minimal Project Button */
 .cta-button {
     display: inline-block;
-    padding: 20px 40px;
-    border: 2px solid var(--accent);
+    padding: 15px 30px;       /* Smaller (was 20px 40px) */
+    border: 1px solid var(--accent); /* Thinner border (was 2px) */
     color: var(--accent);
     font-family: var(--font-mono);
-    font-size: 1.2rem;
-    border-radius: 5px;
+    font-size: 1rem;          /* Smaller text (was 1.2rem) */
+    border-radius: 3px;       /* Sharper corners for minimal look */
     margin-top: 20px;
-    box-shadow: 0 5px 15px rgba(87, 203, 255, 0.2);
+    
+    /* Removed the permanent glow/shadow */
+    box-shadow: none; 
+    transition: all 0.3s ease;
 }
 
 .cta-button:hover {
-    background-color: rgba(87, 203, 255, 0.1);
-    transform: translateY(-5px);
+    /* Very subtle background tint on hover */
+    background-color: rgba(87, 203, 255, 0.08); 
+    transform: translateY(-3px);
 }
 
 /* --- PROJECTS PAGE --- */
@@ -260,11 +264,6 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
     color: var(--white);
     background-color: rgba(17, 34, 64, 0.8);
 }
-
-.blog-section { border-top: 1px solid #1e2d4d; padding-top: 50px; }
-.blog-post { margin-bottom: 40px; }
-.blog-date { font-family: var(--font-mono); color: var(--accent); font-size: 0.8rem; }
-.blog-title { color: var(--white); font-size: 1.5rem; margin: 10px 0; }
 
 /* --- GALLERY / PHOTOS PAGE --- */
 .album-section { margin-bottom: 80px; }
